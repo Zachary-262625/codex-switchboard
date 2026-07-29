@@ -1,0 +1,6 @@
+runtime/
+*.log
+*.tmp
+first-login.txt
+Thumbs.db
+.DS_Store

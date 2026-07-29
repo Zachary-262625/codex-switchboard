@@ -1,0 +1,6 @@
+interface:
+  display_name: "Codex Model Switchboard"
+  short_description: "Install, switch, and remotely recover Codex models"
+  default_prompt: "Use $codex-switchboard to switch Codex to the requested provider, preserve the handoff log, and restart safely."
+policy:
+  allow_implicit_invocation: true
