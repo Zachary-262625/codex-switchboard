@@ -1,5 +1,9 @@
 # Codex Switchboard
 
+<p align="center">
+  <img src="assets/codex-switchboard-icon-cross-switch-retro-v3.png" alt="Codex Switchboard retro Cross Switch icon" width="220">
+</p>
+
 用自然语言或手机安全切换 Codex Desktop 模型，并在重启前保存交接上下文。
 
 Codex Switchboard 是一个面向 Windows 的 Codex Skill。它组合 Tailscale、CC Switch 和本机 Remote Bridge，让用户无需依赖鼠标坐标或悬停按钮，就能：

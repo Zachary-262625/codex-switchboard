@@ -1,6 +1,9 @@
 interface:
   display_name: "Codex Model Switchboard"
   short_description: "Install, switch, and remotely recover Codex models"
+  icon_small: "./assets/codex-switchboard-icon-cross-switch-retro-v3-400.png"
+  icon_large: "./assets/codex-switchboard-icon-cross-switch-retro-v3.png"
+  brand_color: "#EC3E91"
   default_prompt: "Use $codex-switchboard to switch Codex to the requested provider, preserve the handoff log, and restart safely."
 policy:
   allow_implicit_invocation: true
