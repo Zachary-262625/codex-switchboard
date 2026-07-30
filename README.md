@@ -69,14 +69,44 @@ CC Switch 只应从项目的 [GitHub Releases](https://github.com/farion1231/cc-
 
 ## 安装 Skill
 
-克隆到个人 Codex Skills 目录：
+### 稳定版（推荐）
+
+从 [GitHub Releases](https://github.com/Zachary-262625/codex-switchboard/releases) 下载 `codex-switchboard-v1.0.0.zip`，解压到个人 Codex Skills 目录。解压后的结构应为：
+
+```text
+%USERPROFILE%\.codex\skills\codex-switchboard\SKILL.md
+```
+
+也可以用 PowerShell 安装固定版本：
+
+```powershell
+$zip = Join-Path $env:TEMP "codex-switchboard-v1.0.0.zip"
+
+Invoke-WebRequest `
+  -Uri "https://github.com/Zachary-262625/codex-switchboard/releases/download/v1.0.0/codex-switchboard-v1.0.0.zip" `
+  -OutFile $zip
+
+Expand-Archive -LiteralPath $zip `
+  -DestinationPath "$env:USERPROFILE\.codex\skills" `
+  -Force
+```
+
+下载后可用以下命令计算 SHA-256，并与 Release 中的 `SHA256SUMS.txt` 比较：
+
+```powershell
+(Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash
+```
+
+### 开发版
+
+如需跟随 `main` 的最新变化，可克隆仓库：
 
 ```powershell
 git clone https://github.com/Zachary-262625/codex-switchboard.git `
   "$env:USERPROFILE\.codex\skills\codex-switchboard"
 ```
 
-也可以在 CC Switch 的 Skills 管理页面中，通过本 GitHub 仓库安装。安装后重新启动 Codex Desktop，让新的 Skill 进入后续任务上下文。
+也可以在 CC Switch 的 Skills 管理页面中，通过本 GitHub 仓库安装。用于跨设备兼容性验证时，优先使用 Release 中的固定版本。安装后重新启动 Codex Desktop，让新的 Skill 进入后续任务上下文。
 
 ## 初次配置
 
